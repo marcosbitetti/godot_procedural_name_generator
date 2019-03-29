@@ -1,0 +1,201 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/name_generator/ui/name_generator_config.gd" type="Script" id=1]
+[ext_resource path="res://addons/name_generator/ui/loading.svg" type="Texture" id=2]
+[ext_resource path="res://addons/name_generator/ui/jaba/godot.png" type="Texture" id=3]
+[ext_resource path="res://addons/name_generator/ui/jaba/wwp.jpg" type="Texture" id=4]
+
+[node name="name_generator_config" type="WindowDialog"]
+visible = true
+margin_right = 426.0
+margin_bottom = 480.0
+window_title = "Procedural Name Generator"
+script = ExtResource( 1 )
+
+[node name="a" type="VBoxContainer" parent="."]
+margin_right = 420.0
+margin_bottom = 474.0
+
+[node name="header" type="PanelContainer" parent="a"]
+margin_right = 420.0
+margin_bottom = 62.0
+
+[node name="a" type="HBoxContainer" parent="a/header"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 413.0
+margin_bottom = 55.0
+size_flags_horizontal = 3
+
+[node name="a" type="VBoxContainer" parent="a/header/a"]
+margin_right = 342.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+
+[node name="a" type="HBoxContainer" parent="a/header/a/a"]
+margin_right = 342.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="a/header/a/a/a"]
+margin_top = 3.0
+margin_right = 74.0
+margin_bottom = 17.0
+text = "How use it?"
+
+[node name="link1" type="Button" parent="a/header/a/a/a"]
+margin_left = 78.0
+margin_right = 167.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+custom_colors/font_color = Color( 0.901961, 1, 0.227451, 1 )
+custom_colors/font_color_hover = Color( 0.972549, 0.694118, 0.207843, 1 )
+text = "Text tutorial"
+flat = true
+
+[node name="link2" type="Button" parent="a/header/a/a/a"]
+margin_left = 171.0
+margin_right = 269.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+custom_colors/font_color = Color( 0.901961, 1, 0.227451, 1 )
+custom_colors/font_color_hover = Color( 0.972549, 0.694118, 0.207843, 1 )
+text = "Video tutorial"
+flat = true
+
+[node name="b" type="HBoxContainer" parent="a/header/a/a"]
+margin_top = 24.0
+margin_right = 342.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="a/header/a/a/b"]
+margin_top = 3.0
+margin_right = 182.0
+margin_bottom = 17.0
+text = "Colaborate to include specie"
+
+[node name="link3" type="Button" parent="a/header/a/a/b"]
+margin_left = 186.0
+margin_right = 263.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+custom_colors/font_color = Color( 0.901961, 1, 0.227451, 1 )
+custom_colors/font_color_hover = Color( 0.972549, 0.694118, 0.207843, 1 )
+text = "repository"
+flat = true
+
+[node name="b" type="VBoxContainer" parent="a/header/a"]
+margin_left = 346.0
+margin_right = 406.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 60, 48 )
+
+[node name="b" type="HBoxContainer" parent="a/header/a/b"]
+margin_right = 60.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="loading_ind" type="Label" parent="a/header/a/b/b"]
+visible = false
+margin_top = 5.0
+margin_right = 49.0
+margin_bottom = 19.0
+size_flags_horizontal = 3
+text = "Loading"
+align = 1
+
+[node name="update_indicator" type="TextureRect" parent="a/header/a/b/b"]
+visible = false
+margin_left = 53.0
+margin_right = 77.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+rect_rotation = -290.76
+rect_pivot_offset = Vector2( 12, 12 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="body" type="PanelContainer" parent="a"]
+margin_top = 66.0
+margin_right = 420.0
+margin_bottom = 418.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="scroll" type="ScrollContainer" parent="a/body"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 413.0
+margin_bottom = 345.0
+
+[node name="list" type="VBoxContainer" parent="a/body/scroll"]
+margin_right = 406.0
+margin_bottom = 164.0
+size_flags_horizontal = 3
+
+[node name="footer" type="PanelContainer" parent="a"]
+margin_top = 422.0
+margin_right = 420.0
+margin_bottom = 474.0
+
+[node name="a" type="HBoxContainer" parent="a/footer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 413.0
+margin_bottom = 45.0
+alignment = 2
+
+[node name="a" type="VBoxContainer" parent="a/footer/a"]
+margin_right = 318.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+
+[node name="commit" type="Label" parent="a/footer/a/a"]
+margin_right = 318.0
+margin_bottom = 14.0
+hint_tooltip = "Last commit on database"
+text = "Last update: "
+clip_text = true
+
+[node name="date" type="Label" parent="a/footer/a/a"]
+margin_top = 18.0
+margin_right = 318.0
+margin_bottom = 32.0
+hint_tooltip = "Last commit on database"
+clip_text = true
+
+[node name="jaba2" type="Button" parent="a/footer/a"]
+visible = false
+margin_left = 274.0
+margin_right = 318.0
+margin_bottom = 38.0
+mouse_default_cursor_shape = 2
+icon = ExtResource( 3 )
+flat = true
+clip_text = true
+
+[node name="sep1" type="VSeparator" parent="a/footer/a"]
+margin_left = 322.0
+margin_right = 326.0
+margin_bottom = 38.0
+
+[node name="jaba1" type="Button" parent="a/footer/a"]
+margin_left = 330.0
+margin_right = 406.0
+margin_bottom = 38.0
+mouse_default_cursor_shape = 2
+icon = ExtResource( 4 )
+flat = true
+clip_text = true
+
+[node name="http" type="HTTPRequest" parent="."]
+use_threads = true
+[connection signal="about_to_show" from="." to="." method="_on_name_generator_config_about_to_show"]
+[connection signal="popup_hide" from="." to="." method="_on_name_generator_config_popup_hide"]
+[connection signal="pressed" from="a/header/a/a/a/link1" to="." method="_on_link1_pressed"]
+[connection signal="pressed" from="a/header/a/a/a/link2" to="." method="_on_link2_pressed"]
+[connection signal="pressed" from="a/header/a/a/b/link3" to="." method="_on_link3_pressed"]
+[connection signal="pressed" from="a/footer/a/jaba1" to="." method="_on_jaba1_pressed"]

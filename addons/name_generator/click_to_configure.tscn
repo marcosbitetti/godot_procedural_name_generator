@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/name_generator/ui/configure.gd" type="Script" id=1]
+
+[node name="click_to_configure" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 415.15
+margin_top = 14.25
+margin_right = 598.15
+margin_bottom = 28.25
+text = "Configure scene, dont use it!"
+
+[node name="timer" type="Timer" parent="."]
+
+[node name="population" type="Node2D" parent="."]
+[connection signal="timeout" from="timer" to="." method="_rise_creature"]

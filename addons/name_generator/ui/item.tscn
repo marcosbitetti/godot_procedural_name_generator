@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/name_generator/ui/item.gd" type="Script" id=1]
+[ext_resource path="res://addons/name_generator/ui/loading.svg" type="Texture" id=2]
+
+[node name="item" type="PanelContainer"]
+margin_right = 262.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+
+[node name="box" type="HBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 255.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="specie" type="CheckBox" parent="box"]
+margin_right = 213.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+text = "specie"
+
+[node name="try" type="Button" parent="box"]
+margin_left = 217.0
+margin_right = 248.0
+margin_bottom = 24.0
+text = "Try"
+
+[node name="loading" type="TextureRect" parent="box"]
+visible = false
+margin_left = 224.0
+margin_right = 248.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+rect_pivot_offset = Vector2( 12, 12 )
+texture = ExtResource( 2 )
+expand = true
+[connection signal="toggled" from="box/specie" to="." method="_on_specie_toggled"]
